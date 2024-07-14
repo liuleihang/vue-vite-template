@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+# 根据.lintstagedrc配置格式化并提交代码
+pnpm run lint:lint-staged
+# npx --no-install lint-staged
