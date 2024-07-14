@@ -1,17 +1,17 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 interface AppState {
-  title: string,
-  logo: string,
+  title: string;
+  logo: string;
 }
 
 export const useAppStore = defineStore('app', {
-  state: (): AppState =>{
+  state: (): AppState => {
     return {
       title: '',
-      logo: '',
-    }
+      logo: ''
+    };
   },
   // 使用默认持久化配置保存
-  persist: true,
-})
+  persist: true
+});

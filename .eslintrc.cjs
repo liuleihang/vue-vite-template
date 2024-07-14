@@ -36,6 +36,7 @@ module.exports = {
     'vue/max-attributes-per-line': 'off',
     'vue/multiline-html-element-content-newline': 'off',
     'vue/singleline-html-element-content-newline': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     // 忽略第一个属性换行
     'vue/first-attribute-linebreak': [
       'error',
@@ -43,6 +44,11 @@ module.exports = {
         singleline: 'ignore',
         multiline: 'ignore'
       }
-    ]
+    ],
+    // 忽略组件命名为多词限制
+    'vue/multi-word-component-names': 'off',
+    // 忽略未使用变量
+    '@typescript-eslint/no-unused-vars': 'off',
+    'no-unused-vars': 'off'
   }
 };

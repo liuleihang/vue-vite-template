@@ -1,8 +1,8 @@
-import { createPinia } from 'pinia'
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import { createPinia } from 'pinia';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
-const store = createPinia()
+const store = createPinia();
 //store持久化
-store.use(piniaPluginPersistedstate)
+store.use(piniaPluginPersistedstate);
 
-export default store
+export default store;

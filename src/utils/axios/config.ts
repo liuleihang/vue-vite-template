@@ -1,13 +1,13 @@
 interface Config {
   base_url: {
-    base: string
-    dev: string
-    pro: string
-    test: string
-  }
-  result_code: number | string
-  default_headers: AxiosHeaders
-  request_timeout: number
+    base: string;
+    dev: string;
+    pro: string;
+    test: string;
+  };
+  result_code: number | string;
+  default_headers: AxiosHeaders;
+  request_timeout: number;
 }
 const config: Config = {
   /**
@@ -36,6 +36,6 @@ const config: Config = {
    * 可选值：application/x-www-form-urlencoded multipart/form-data
    */
   default_headers: 'application/json'
-}
+};
 
-export { config }
+export { config };

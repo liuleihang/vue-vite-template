@@ -1,27 +1,27 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/example">Example</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div class="example">
+    <header>
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/example/icon">图标</RouterLink>
+          <RouterLink to="/example/request">请求</RouterLink>
+        </nav>
+      </div>
+    </header>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
+.example {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -58,6 +58,9 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
+  .example {
+    flex-direction: row;
+  }
   header {
     display: flex;
     place-items: center;

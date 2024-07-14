@@ -1,9 +1,5 @@
 <template>
   <div></div>
-  <Table v-model:pageSize="pageSize" v-model:currentPage="currentPage" :columns="columns" :data="dataList"
-    default-expand-all node-key="id" :loading="loading" :pagination="{
-    total: total
-  }" stripe @register="tableRegister" />
 </template>
 
 <script setup lang="ts">
