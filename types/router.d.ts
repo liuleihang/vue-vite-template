@@ -1,5 +1,5 @@
-import type { RouteRecordRaw } from 'vue-router'
-import { defineComponent } from 'vue'
+import type { RouteRecordRaw } from 'vue-router';
+import { defineComponent } from 'vue';
 
 /**
 * redirect: noredirect        当设置 noredirect 的时候该路由在面包屑导航中不可被点击
@@ -34,17 +34,17 @@ import { defineComponent } from 'vue'
 **/
 
 interface RouteMetaCustom extends Record<string | number | symbol, unknown> {
-  hidden?: boolean
-  alwaysShow?: boolean
-  title?: string
-  icon?: string
-  noCache?: boolean
-  breadcrumb?: boolean
-  affix?: boolean
-  activeMenu?: string
-  noTagsView?: boolean
-  canTo?: boolean
-  permission?: string[]
+  hidden?: boolean;
+  alwaysShow?: boolean;
+  title?: string;
+  icon?: string;
+  noCache?: boolean;
+  breadcrumb?: boolean;
+  affix?: boolean;
+  activeMenu?: string;
+  noTagsView?: boolean;
+  canTo?: boolean;
+  permission?: string[];
 }
 
 declare module 'vue-router' {
@@ -54,25 +54,25 @@ declare module 'vue-router' {
 type Component<T = any> =
   | ReturnType<typeof defineComponent>
   | (() => Promise<typeof import('*.vue')>)
-  | (() => Promise<T>)
+  | (() => Promise<T>);
 
 declare global {
   declare interface AppRouteRecordRaw extends Omit<RouteRecordRaw, 'meta' | 'children'> {
-    name: string
-    meta: RouteMetaCustom
-    component?: Component | string
-    children?: AppRouteRecordRaw[]
-    props?: Recordable
-    fullPath?: string
+    name: string;
+    meta: RouteMetaCustom;
+    component?: Component | string;
+    children?: AppRouteRecordRaw[];
+    props?: Recordable;
+    fullPath?: string;
   }
 
   declare interface AppCustomRouteRecordRaw
     extends Omit<RouteRecordRaw, 'meta' | 'component' | 'children'> {
-    name: string
-    meta: RouteMetaCustom
-    component: string
-    path: string
-    redirect: string
-    children?: AppCustomRouteRecordRaw[]
+    name: string;
+    meta: RouteMetaCustom;
+    component: string;
+    path: string;
+    redirect: string;
+    children?: AppCustomRouteRecordRaw[];
   }
 }

@@ -3,7 +3,7 @@ import type {
   AxiosRequestConfig,
   AxiosRequestHeaders,
   AxiosResponse,
-  AxiosError
+  AxiosError,
 } from 'axios';
 import axios from 'axios';
 import qs from 'qs';
@@ -18,7 +18,7 @@ const { result_code, base_url } = config;
 // 创建axios实例
 const service: AxiosInstance = axios.create({
   baseURL: '', // api 的 base_url
-  timeout: config.request_timeout // 请求超时时间
+  timeout: config.request_timeout, // 请求超时时间
 });
 
 // request拦截器

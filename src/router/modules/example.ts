@@ -7,7 +7,7 @@ const exampleRoutes: Array<RouteRecordRaw> = [
     component: () => import('@/views/Example/Example.vue'),
     meta: {
       title: '案例',
-      keepAlive: true
+      keepAlive: true,
     },
     children: [
       {
@@ -15,20 +15,20 @@ const exampleRoutes: Array<RouteRecordRaw> = [
         name: 'Request',
         meta: {
           title: '接口请求',
-          keepAlive: true
+          keepAlive: true,
         },
-        component: () => import('@/views/Example/Request.vue')
+        component: () => import('@/views/Example/Request.vue'),
       },
       {
         path: 'icon',
         name: 'Icon',
         meta: {
           title: '图标',
-          keepAlive: true
+          keepAlive: true,
         },
-        component: () => import('@/views/Example/Icon.vue')
-      }
-    ]
-  }
+        component: () => import('@/views/Example/Icon.vue'),
+      },
+    ],
+  },
 ];
 export default exampleRoutes;

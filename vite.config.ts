@@ -11,23 +11,23 @@ export default defineConfig({
   plugins: [vue(), vueJsx(), EslintPlugin(), UnoCSS()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
   },
   server: {
     host: '0.0.0.0', //监听所有IP地址
     port: 8088, //启动端口
     hmr: {
       host: '127.0.0.1',
-      port: 8080
+      port: 8080,
     },
     // 设置 https 代理
     proxy: {
       '/api': {
         target: '127.0.0.1:3000',
         changeOrigin: true,
-        rewrite: (path: string) => path.replace(/^\/api/, '')
-      }
-    }
-  }
+        rewrite: (path: string) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 });

@@ -9,9 +9,9 @@ export const useAppStore = defineStore('app', {
   state: (): AppState => {
     return {
       title: '',
-      logo: ''
+      logo: '',
     };
   },
   // 使用默认持久化配置保存
-  persist: true
+  persist: true,
 });

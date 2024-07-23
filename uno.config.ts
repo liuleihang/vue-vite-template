@@ -22,15 +22,15 @@ export default defineConfig({
       // 默认图标样式
       extraProperties: {
         display: 'inline-block',
-        'vertical-align': 'middle'
+        'vertical-align': 'middle',
       },
       // 图标合集
       collections: {
         // 自定义图标合集
         h: FileSystemIconLoader('./src/assets/svgs', (svg) => {
           return svg.replace(/#fff/, 'currentColor');
-        })
-      }
-    })
-  ]
+        }),
+      },
+    }),
+  ],
 });

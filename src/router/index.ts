@@ -8,17 +8,17 @@ export const constantRouterMap: Array<RouteRecordRaw> = [
     name: 'Home',
     meta: {
       title: '首页',
-      keepAlive: true
+      keepAlive: true,
     },
-    component: () => import('@/views/HomeView.vue')
+    component: () => import('@/views/HomeView.vue'),
   },
-  ...exampleRoutes
+  ...exampleRoutes,
 ];
 
 const routes = [...constantRouterMap];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes
+  routes,
 });
 export default router;
