@@ -47,7 +47,7 @@
 
 body {
   min-height: 100vh;
-  font-size: 15px;
+  font-size: 16px;
   font-family:
     Inter,
     -apple-system,
@@ -66,7 +66,8 @@ body {
   transition:
     color 0.5s,
     background-color 0.5s;
-  line-height: 1.6;
+
+  /* line-height: 1.6; */
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
